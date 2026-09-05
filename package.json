@@ -1,0 +1,40 @@
+{
+  "name": "contentforge",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ContentForge — OpenClaw-inspired content factory control UI for multi-platform video publishing",
+  "scripts": {
+    "dev": "concurrently -k -n api,ui -c teal,magenta \"node server/index.js\" \"vite\"",
+    "dev:ui": "vite",
+    "dev:api": "node server/index.js",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "start": "NODE_ENV=production node server/index.js",
+    "update": "node scripts/update.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.0",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.11"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Yevhen Potapov",
+    "url": "https://github.com/yevhenypupotapov-code"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yevhenypupotapov-code/contentforge.git"
+  }
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "run_mto2gxey_yeob",
+    "createdAt": "2026-09-05T07:33:55.114Z",
+    "engine": "long-v3",
+    "platforms": [
+      "youtube",
+      "vk"
+    ],
+    "status": "queued",
+    "url": null,
+    "note": "MVP verify"
+  },
+  {
+    "id": "run_20260905_001",
+    "createdAt": "2026-09-05T03:00:00.000Z",
+    "engine": "long-v3",
+    "platforms": [
+      "youtube"
+    ],
+    "status": "published",
+    "url": "https://youtube.com/@yevhenpotapov5956",
+    "note": "Gold Standard hybrid 70/30"
+  },
+  {
+    "id": "run_20260904_018",
+    "createdAt": "2026-09-04T13:00:00.000Z",
+    "engine": "long-v3",
+    "platforms": [
+      "youtube"
+    ],
+    "status": "published",
+    "url": "https://youtube.com/@yevhenpotapov5956",
+    "note": "hold<=5s, YOLO/CLIP/OCR"
+  },
+  {
+    "id": "run_20260904_012",
+    "createdAt": "2026-09-04T05:00:00.000Z",
+    "engine": "long-v3",
+    "platforms": [
+      "youtube",
+      "vk"
+    ],
+    "status": "failed",
+    "url": null,
+    "note": "VK adapter stub — skip"
+  },
+  {
+    "id": "run_20260903_009",
+    "createdAt": "2026-09-03T16:00:00.000Z",
+    "engine": "long-v3",
+    "platforms": [
+      "youtube"
+    ],
+    "status": "published",
+    "url": "https://youtube.com/@yevhenpotapov5956",
+    "note": "evening slot 18:00 Berlin"
+  },
+  {
+    "id": "run_20260903_003",
+    "createdAt": "2026-09-03T09:00:00.000Z",
+    "engine": "short-v1",
+    "platforms": [
+      "youtube"
+    ],
+    "status": "published",
+    "url": "https://youtube.com/@yevhenpotapov5956",
+    "note": "morning slot 11:00 Berlin"
+  }
+]
