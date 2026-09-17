@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import express from 'express'
 import cors from 'cors'
 import fs from 'fs'
