@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import { useEffect, useState } from 'react'
 import { api, type Channel } from '../api'
 import { track } from '../analytics'
