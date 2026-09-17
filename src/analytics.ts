@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 const LS_OPT = 'cf_analytics_enabled'
 const LS_SESSION = 'cf_analytics_session'
 const LS_STARTED = 'cf_analytics_app_start'
