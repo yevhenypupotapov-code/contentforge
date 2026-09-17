@@ -2,15 +2,23 @@ ContentForge — Proprietary Software License
 
 Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 
-Ownership: All title, ownership rights, and intellectual property rights in and to ContentForge (the "Software"), including source code, documentation, branding, and derivatives, belong exclusively to Yevhen Potapov.
+Ownership: All title, ownership rights, and intellectual property rights in and
+to this software, including source code, documentation, branding, artwork and
+derivatives, belong exclusively to Yevhen Potapov.
 
-Limited use grant: You may clone, download, and run the Software for personal or internal use, provided you do not remove this copyright notice.
+Limited use grant: You may clone, download and run the software for personal or
+internal use, provided you do not remove this copyright notice.
 
 You may NOT, without prior written permission from Yevhen Potapov:
-- sell, sublicense, or rebrand the Software as your own product;
-- claim ownership of the Software or its trademark/name "ContentForge";
-- redistribute modified versions under a different license or copyright.
+- sell, sublicense, or rebrand the software as your own product;
+- claim ownership of the software or its trademark/name;
+- redistribute modified versions under a different name;
+- remove or alter this notice, the copyright line, or the author attribution.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+No warranty: the software is provided "as is", without warranty of any kind,
+express or implied, including but not limited to the warranties of
+merchantability, fitness for a particular purpose and noninfringement. In no
+event shall the author be liable for any claim, damages or other liability
+arising from, out of or in connection with the software or its use.
 
-Contact / owner: Yevhen Potapov · https://github.com/yevhenypupotapov-code
+Contact: https://github.com/yevhenypupotapov-code
