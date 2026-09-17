@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { api, type Channel, type Health, type Run } from '../api'
