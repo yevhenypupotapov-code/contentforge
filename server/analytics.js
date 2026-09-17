@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
