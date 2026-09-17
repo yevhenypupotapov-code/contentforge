@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Yevhen Potapov. All rights reserved.
+# Part of ContentForge. See LICENSE in the repository root.
 # ContentForge - system check for Windows.
 # Verifies everything the factory needs, without changing anything.
 $ErrorActionPreference = 'Continue'
