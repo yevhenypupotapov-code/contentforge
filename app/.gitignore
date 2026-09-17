@@ -1,0 +1,15 @@
+# secrets and credentials
+client_secret*.json
+token.pickle
+*.token
+youtube_token.json
+.env
+*.key
+
+# personal configs
+config.json
+
+# build artefacts
+node_modules/
+__pycache__/
+*.pyc
