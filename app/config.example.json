@@ -1,0 +1,27 @@
+{
+  "_comment": "ContentForge sample settings. Copy next to the factory scripts and edit paths.",
+  "factory_root": "C:\\path\\to\\factory",
+  "comfy_url": "http://127.0.0.1:8188",
+  "ollama_url": "http://127.0.0.1:11434",
+  "output_dirs": [
+    "D:\\Tutorial\\Output"
+  ],
+  "lang": "ru",
+  "privacy": "public",
+  "schedule": {
+    "days": ["friday", "saturday"],
+    "long_times": ["11:00", "18:00"],
+    "shorts_times": ["07:00", "15:00", "23:00"]
+  },
+  "local_only": {
+    "text_model": "ornith-1.5:9b",
+    "num_gpu": 0,
+    "keep_alive": "12h",
+    "tts": "windows-sapi",
+    "cloud_tts_optin_env": "LTX_TTS_MODE=cloud"
+  },
+  "telegram_notify": {
+    "enabled": true,
+    "script": "notify_telegram.py"
+  }
+}
