@@ -1,0 +1,9 @@
+requests
+pillow
+numpy
+moviepy
+edge-tts
+gTTS
+google-api-python-client
+google-auth-oauthlib
+imagehash
