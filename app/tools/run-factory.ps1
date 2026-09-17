@@ -35,6 +35,9 @@ Write-Output "Factory root: $factory"
 
 $py = (Get-Command python -ErrorAction SilentlyContinue).Source
 if (-not $py) { $py = (Get-Command py -ErrorAction SilentlyContinue).Source }
+# prefer the private environment created by tools/install.ps1
+$venvPy = Join-Path $root '.venv\Scripts\python.exe'
+if (Test-Path $venvPy) { $py = $venvPy; Write-Output "Using the app environment: $venvPy" }
 
 if ($Kind -eq 'shorts') {
     $script = Join-Path $factory 'AUTOPILOT.py'
