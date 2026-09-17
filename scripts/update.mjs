@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 #!/usr/bin/env node
 import { execFileSync } from 'child_process'
 import fs from 'fs'
