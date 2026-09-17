@@ -1,4 +1,5 @@
 @echo off
+@REM Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 setlocal enabledelayedexpansion
 title ContentForge - content factory for Windows
 cd /d "%~dp0"
@@ -12,6 +13,7 @@ echo ================================================================
 echo.
 echo    [1]  Check this PC  (Python, Ollama, ComfyUI, FFmpeg, GPU)
 echo    [2]  Install / update Python packages
+   [8]  Auto-download what the factory needs (FFmpeg, Ollama, model)
 echo    [3]  Run Shorts factory
 echo    [4]  Run long factory
 echo    [5]  Open the dashboard (if bundled)
@@ -23,6 +25,7 @@ set /p choice=  Select and press Enter:
 
 if "%choice%"=="1" call :preflight
 if "%choice%"=="2" call :install
+if "%choice%"=="8" call :bootstrap
 if "%choice%"=="3" call :shorts
 if "%choice%"=="4" call :long
 if "%choice%"=="5" call :dashboard
@@ -34,6 +37,10 @@ goto :menu
 
 :preflight
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\preflight.ps1"
+goto :eof
+
+:bootstrap
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\bootstrap.ps1"
 goto :eof
 
 :install
