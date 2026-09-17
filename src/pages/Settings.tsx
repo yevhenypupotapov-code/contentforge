@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import { useEffect, useMemo, useState } from 'react'
 import { api } from '../api'
 import { isAnalyticsEnabled, setAnalyticsEnabled, track } from '../analytics'
