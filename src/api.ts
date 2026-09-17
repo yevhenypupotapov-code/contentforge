@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 export type Health = {
   ok: boolean
   service: string
