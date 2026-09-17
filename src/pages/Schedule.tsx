@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Yevhen Potapov. All rights reserved.
 import { track } from '../analytics'
 import { useEffect, useState } from 'react'
 
