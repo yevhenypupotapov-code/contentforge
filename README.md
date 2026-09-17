@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/yevhenypupotapov-code/contentforge/releases"><img src="https://img.shields.io/github/v/release/yevhenypupotapov-code/contentforge?style=flat-square&label=%D1%80%D0%B5%D0%BB%D0%B8%D0%B7" alt="Release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
+  <a href="LICENSE"><img src="src="https://img.shields.io/badge/license-Proprietary-b3402a?style=flat-square" alt="License: Proprietary">></a>
   <img src="https://img.shields.io/badge/platform-Windows-0078D4?style=flat-square" alt="Platform: Windows">
   <img src="https://img.shields.io/badge/%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-b3402a?style=flat-square" alt="Local models only">
 </p>
@@ -73,4 +73,4 @@ npm run dev
 - Канал: [YEVHEN POTAPOV](https://www.youtube.com/@yevhenpotapov5956)
 - GitHub: [yevhenypupotapov-code](https://github.com/yevhenypupotapov-code)
 
-<p align="center"><sub>Локальные модели · Windows · 2026</sub></p>
+<p align="center"><sub>© 2026 Yevhen Potapov · Все права защищены · Локальные модели · Windows</sub></p>
