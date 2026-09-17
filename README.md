@@ -1,61 +1,76 @@
-# ContentForge
+# ContentForge 🛠️ — контент-фабрика для Windows
 
-OpenClaw-inspired dark dashboard for a multi-platform content factory (YouTube, VK Video, Twitch).
+<p align="center">
+  <img src="assets/banner.svg" alt="ContentForge" width="100%">
+</p>
 
-**Owner / copyright:** Yevhen Potapov only · YT @yevhenpotapov5956
+<p align="center">
+  <a href="https://github.com/yevhenypupotapov-code/contentforge/releases"><img src="https://img.shields.io/github/v/release/yevhenypupotapov-code/contentforge?style=flat-square&label=%D1%80%D0%B5%D0%BB%D0%B8%D0%B7" alt="Release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/platform-Windows-0078D4?style=flat-square" alt="Platform: Windows">
+  <img src="https://img.shields.io/badge/%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-b3402a?style=flat-square" alt="Local models only">
+</p>
 
-**License:** Proprietary — free to download and run for personal/internal use. See LICENSE. Do not sell, rebrand, or claim ownership without written permission from Yevhen Potapov.
+Приложение контент-фабрики: ставится на ПК, проверяет систему и запускает выпуск —
+от темы до публикации на YouTube. Плюс веб-панель для наблюдения за заводом.
 
-Gold Standard: https://github.com/yevhenypupotapov-code/ltx-youtube-gold-standard
+**Никакого облака в создании контента.** Сценарий считает локальная модель, кадры — ComfyUI,
+голос — системный синтез Windows, монтаж — FFmpeg.
 
-Repo: https://github.com/yevhenypupotapov-code/contentforge
+---
 
-## What it is
+## Скачать
 
-- Overview — factory health, today volume, last runs, channels
-- Pipeline — Gold Standard v3.0
-- Channels — YouTube demo, VK/Twitch stubs
-- Schedule — 11:00 / 18:00 Europe/Berlin
-- Runs — mock + API jobs
-- Updates — OpenClaw-style auto-update
-- Insights — local product analytics
-- Settings — env refs, privacy, analytics toggle
+<p align="center">
+  <a href="https://github.com/yevhenypupotapov-code/contentforge/releases/latest">
+    <img src="https://img.shields.io/badge/%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-ContentForge--Windows.zip-e08a3c?style=for-the-badge" alt="Download">
+  </a>
+</p>
 
-RU primary labels, EN secondary.
+Распаковать → `ContentForge.bat` → «Проверить этот ПК».
 
-## Stack
+## Что в приложении
 
-Vite + React + TypeScript, plain CSS, Express API.
+```
+ContentForge.bat            меню: проверка ПК, установка пакетов, запуск заводов
+tools/preflight.ps1         проверка Python, Ollama, ComfyUI, FFmpeg, GPU, RAM, дисков
+tools/install.ps1           установка и обновление Python-пакетов
+tools/run-factory.ps1       запуск одной проходки завода (Shorts или длинный)
+config.example.json         образец настроек
+SECURITY.md                 что никогда не публикуется (ключи, токены, личные пути)
+```
 
-Ports: UI **5173**, API **8787** (Vite proxies /api).
+## Веб-панель
 
-## Clone and run
+В репозитории есть панель управления (React + Vite + Node): обзор, конвейер, выпуски,
+расписание, каналы, аналитика, настройки.
 
-- Repository: https://github.com/yevhenypupotapov-code/contentforge
-- Install dependencies, then start combined UI+API (dev)
-- UI http://127.0.0.1:5173 · API http://127.0.0.1:8787
+```bash
+npm install
+npm run dev
+```
 
-## Updates
+## Требования
 
-Owner pushes to GitHub. Users refresh via UI page Updates or the package `update` script.
-Restart the process after applying.
-See GET /api/updates/status and POST /api/updates/apply. Health returns version + updateAvailable.
+| Компонент | Зачем |
+|---|---|
+| Windows 10/11 | — |
+| Python 3.10+ | запуск завода |
+| FFmpeg | монтаж и кодирование |
+| [Ollama](https://ollama.com) | локальная языковая модель для сценария |
+| ComfyUI + LTXV | генерация кадров и видео |
+| NVIDIA GPU 8 ГБ+ | ускорение генерации |
 
-## Analytics (privacy-first, local-only)
+## Режим работы
 
-Product usage events so Yevhen can improve ContentForge. No third-party SaaS.
+Выпуски публикуются **в открытом доступе**, только **по пятницам и субботам**:
+длинный завод — 11:00 и 18:00, короткий — 07:00, 15:00, 23:00.
 
-Events (no PII): page_view, nav_click, run_create, channel_connect_click, schedule_toggle, update_check, update_apply, settings_change, pipeline_run_click, app_start.
+## Ссылки
 
-Shape: { id, ts, sessionId, appVersion, event, props } — props are enums/counts/booleans only.
+- Приложение: [`app/`](app/)
+- Ядро длинного завода: [ltx-youtube-gold-standard](https://github.com/yevhenypupotapov-code/ltx-youtube-gold-standard)
+- Канал: [YEVHEN POTAPOV](https://www.youtube.com/@yevhenpotapov5956)
+- GitHub: [yevhenypupotapov-code](https://github.com/yevhenypupotapov-code)
 
-Storage: data/analytics/events.jsonl (capped ~5000 lines) + data/analytics/config.json.
-
-Opt out: Settings toggle «Сбор аналитики» OFF, or set enabled false in config.json.
-
-Owner APIs: /api/analytics/summary, /api/analytics/export, /api/analytics/event.
-Optional env CF_ANALYTICS_WEBHOOK for owner remote sink (stub).
-
-## License
-
-Proprietary (c) 2026 Yevhen Potapov. Free public download/use under LICENSE. Ownership remains with Yevhen Potapov.
+<p align="center"><sub>Локальные модели · Windows · 2026</sub></p>
